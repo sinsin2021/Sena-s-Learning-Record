@@ -26,25 +26,31 @@ categories: note first
 	
 	第三步- 建立一個python的虛擬環境
 			1. 開啟cmd後,目前我是設定在預設位置 C:\Users，下指令新增一個名為python36的python虛擬環境
+			
 				```
 				conda create --name python36 python=3
 				```
+				
 			2. 出現Proceed(y/n)? 時，請輸入y
 	
 	第四步- 進入虛擬環境
 			1.開啟cmd後，執行指令，進入到剛剛設定的虛擬環境
+			
 			 ```
 			 activate python36
 			 ```
+
 	第五步- 在python的虛擬環境中，使用cd指令，將位置跳轉到有py檔案的資料夾後
+	
 			```
 			python 檔案名稱.py
 			```
+			
 			就可以正確執行你的python檔案惹!!!!!!!
 			
 
-```
+
 Thank you for read !!
 如果對本文有任何指教，都歡迎來信告知!!
 感謝各位~ 有空再補上圖片使本文更詳細QQ
-```
+
