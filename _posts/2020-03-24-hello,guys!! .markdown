@@ -1,30 +1,30 @@
 ---
 layout: post
-title:  "測試中~"
-date:   2020-03-24 21:03:36 +0530
-categories: Javascript NodeJS
+title:  "初架Blog心得!!"
+date:   2020-03-24 16:24:00 +0530
+categories: note first
 ---
-各位好，我是SNEA!! 測試中123~~
 
-```javascript
-const Razorpay = require('razorpay');
+<img src="picture/Thumbnail.png" width="100" height="100" alt="AltText" />
 
-let rzp = Razorpay({
-	key_id: 'KEY_ID',
-	secret: 'name'
-});
+在學習的過程中，為了解決問題而蒐集了一堆相關資料，想趁此機會將資料給歸整乾淨之外
+也能夠將相關的經驗做一個簡單的分享，希望遇到同樣問題的人也能夠一起學習成長~
 
-// capture request
-rzp.capture(payment_id, cost)
-	.then(function (data) {
-		return 2;
-	})
+我在思考並選擇要將筆記放在哪種類型的部落格中，著實讓我思考了一陣子。
+最初打算用github但是看了教學覺得太複雜且我對git充滿畏懼，即便他真的很好用…
+但最後考慮到維護性+挑戰性(? 我還是回來使用github了!!!!
+
+皇天不負苦心人，我花了快兩小時左右，終於把東西都弄好了~
+所以特地發文慶祝!! *｡٩(ˊᗜˋ*)و*｡
+
+
+蒐集文章的過程中，有些沒有完整記錄到來源，如果有作者或者是知道詳細來源的大大們能夠提供來源網址或者意見給我~如有冒犯盡請見諒!!
+
+
+感謝各位!! 一起踏上coding之路 (๑•̀ω•́)ノ
+
+
 ```
-
-
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Thank you for read !!
+感謝各位
+```
