@@ -17,7 +17,7 @@ plainwhite:
   tagline: Developer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
-  show_excerpts: true
+  #show_excerpts: true
   # generate social links in footer
   social_links:
     #twitter: thelehhman
