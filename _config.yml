@@ -51,7 +51,6 @@ plainwhite:
 
 # Build settings
 theme: plainwhite
-show_excerpts:true
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
