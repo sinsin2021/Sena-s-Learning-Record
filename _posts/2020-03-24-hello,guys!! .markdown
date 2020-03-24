@@ -5,7 +5,7 @@ date:   2020-03-24 16:24:00 +0530
 categories: note first
 ---
 
-<img src="picture/Thumbnail.png" width="100" height="100" alt="AltText" />
+<img src="picture/Thumbnail.png" width="100" height="100" alt="AltText"/>
 
 在學習的過程中，為了解決問題而蒐集了一堆相關資料，想趁此機會將資料給歸整乾淨之外
 也能夠將相關的經驗做一個簡單的分享，希望遇到同樣問題的人也能夠一起學習成長~
