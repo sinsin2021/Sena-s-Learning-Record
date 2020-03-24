@@ -1,6 +1,6 @@
-title: Your awesome title
-author: GitHub User
-email: your-email@domain.com
+title: Sena的研究筆記
+author: sinsin2021
+email: sinsin2021@gmail.com
 theme: plainwhite
 description: > # this means to ignore newlines until "show_exerpts:"
   Write an awesome description for your new site here. You can edit this
@@ -17,7 +17,7 @@ plainwhite:
   tagline: Developer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
-
+  show_excerpts: true
   # generate social links in footer
   social_links:
     #twitter: thelehhman
