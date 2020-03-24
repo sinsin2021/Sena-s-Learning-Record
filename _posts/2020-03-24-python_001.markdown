@@ -2,7 +2,7 @@
 layout: post
 title:  "如何安裝Anaconda python"
 date:   2020-03-24 16:24:00 +0530
-categories: note first
+categories: python
 ---
 
 前言:
