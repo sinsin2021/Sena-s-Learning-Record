@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "如何安裝Anaconda python"
+date:   2020-03-24 16:24:00 +0530
+categories: note first
+---
+
+前言:
+	在安裝python的過程中，找了很多相關文章，因為中途常常因為一些事情而耽誤
+	導致在安裝過程中，很常參考不同的教學文章，而這些安裝流程都有些差異，所以
+	有些步驟會導致我失智後，已經是用成了詭異的方法(裝了多於或缺少的檔案導致噴錯....)
+	因此我將步驟完整的紀錄在這邊，以防以後我可能又再度耍笨安裝不起來..
+	
+
+正文:
+
+	第一步- 至anaconda的官網，點擊Download下載與你電腦版本相符的python
+			個人的Python版本是使用 3.7 version，版本比較新~以下提供連結↓
+			{% highlight ruby %}https://www.anaconda.com/distribution/{% endhighlight %}
+	
+	第二步- 下載完畢後，執行安裝~
+			1. 第一步，Install for 的部分，勾選第一個 Just me
+			2. 第二步，Setup will install Anaconda3.5.0.1(bit) in the following folder. 
+				第二步有點重要，在C槽底下建立一個anaconda3的資料夾，並把位址指到這個地方
+			3. 第三步，advanced Options 請選擇add Anaconda to my path和Register Anaconda as 	my default python，以上兩個都要打勾!!
+	
+	第三步- 建立一個python的虛擬環境
+			1. 開啟cmd後,目前我是設定在預設位置 C:\Users，下指令新增一個名為python36的python虛擬環境
+				```
+				conda create --name python36 python=3
+				```
+			2. 出現Proceed(y/n)? 時，請輸入y
+	
+	第四步- 進入虛擬環境
+			1.開啟cmd後，執行指令，進入到剛剛設定的虛擬環境
+			 ```
+			 activate python36
+			 ```
+	第五步- 在python的虛擬環境中，使用cd指令，將位置跳轉到有py檔案的資料夾後
+			```
+			python 檔案名稱.py
+			```
+			就可以正確執行你的python檔案惹!!!!!!!
+			
+
+```
+Thank you for read !!
+如果對本文有任何指教，都歡迎來信告知!!
+感謝各位~ 有空再補上圖片使本文更詳細QQ
+```
