@@ -70,13 +70,15 @@ driver.switch_to.frame(iframe)
 editor的定位，我一開始著重在textarea這個元件名稱(文本的輸入文字區塊)，試著從他下手，他擁有name和content但始終定位不到，最外層還被iframe給包圍<p>
 一開始我認為先把iframe定位好之後，就可以安心的定位textarea的name或id <p>
 結果 .. 恩 .. 不行 ...  <p>
-看了教學之後才知道，原來要定位在iframe裡面的body上..<p> 
+看了教學之後才知道，原來要定位在iframe裡面的body上..<p>
+
+```
 driver.find_element_by_name("content").send_keys("測試")<p>
 上面這個我是失敗的，不曉得是寫錯還是哪邊沒看好<p>
 
 driver.find_element_by_xpath("/html/body").send_keys("測試中，造成您的困擾敬請見諒") <p>
 試了/html/body當作定位，才順利地將值寫入遇到textarea的定位問題 <p>
-
+```
 
 
 
