@@ -7,7 +7,7 @@ categories: Javascript NodeJS
 
 <font color="#FF0000">定位失敗_縮放視窗</font>
 
-▼ 透過縮放視窗大小，解決定位失敗<p><p>
+▼ 透過縮放視窗大小，解決定位失敗<p>
 
 
 在寫網站自動化測試這條路上，往往讓我花上最多時間的是定位，定位的難度有時候比我想像中還艱難<p>
@@ -26,7 +26,7 @@ categories: Javascript NodeJS
 <font color="#FF0000">定位失敗_iframe、frame框架</font>
 
 
-▽ 透過 iframe、frame 解決定位失敗<p><p>
+▽ 透過 iframe、frame 解決定位失敗<p>
 
 這個問題算滿常發生的，很常會有ID或NAME都在那，但不管怎麼定位，依舊失敗。<p>
 
@@ -47,7 +47,7 @@ driver.switch_to.default_content() -->離開frame框架
 <p>
 <font color="#FF0000">定位失敗_iframe、frame沒有name或id</font>
 
-▽ 透過 iframe、frame 的XPATH解決定位失敗<p><p>
+▽ 透過 iframe、frame 的XPATH解決定位失敗<p>
 
 遇到新難題，iframe框架居然沒有name或id可以定位，於是搜尋了方法確定能夠成功實現後<p>
 趕緊寫上，免得哪天又忘了這些經典案例XD <p>
@@ -64,7 +64,7 @@ driver.switch_to.frame(iframe)
 <font color="#FF0000">定位失敗_iframe的editor</font>
 
 
-▽ 遇到editor的定位問題<p><p>
+▽ 遇到editor的定位問題<p>
 
 
 editor的定位，我一開始著重在textarea這個元件名稱(文本的輸入文字區塊)，試著從他下手，他擁有name和content但始終定位不到，最外層還被iframe給包圍<p>
