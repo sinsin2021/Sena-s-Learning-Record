@@ -22,7 +22,7 @@ categories: Javascript NodeJS
 最後請我朋友幫忙，我們也試著一遍但都無效，最後他無聊縮放了網頁，這個謎就破了一半...<br>
 ( ´•ω•` )   <p><p><p><p>      
 
-
+<p>
 <font color="#FF0000">定位失敗_iframe、frame框架</font>
 
 
@@ -44,7 +44,7 @@ driver.switch_to.frame(frame的ID或NAME)  -->  進入frame框架
 driver.switch_to.default_content() -->離開frame框架
 ```
 
-
+<p>
 <font color="#FF0000">定位失敗_iframe、frame沒有name或id</font>
 
 ▽ 透過 iframe、frame 的XPATH解決定位失敗<p><p>
@@ -60,7 +60,7 @@ iframe=driver.find_element(By.XPATH,'//*[@id="cke_1_contents"]/iframe')
 driver.switch_to.frame(iframe)
 ```
 
-
+<p>
 <font color="#FF0000">定位失敗_iframe的editor</font>
 
 
@@ -85,8 +85,8 @@ driver.find_element_by_xpath("/html/body").send_keys("測試中，造成您的�
 ◆◆◇◇ 參考資料 ◇◇◆◆
 
 
-Python selenium —— 深刻解析及操作frame、iframe - [huilansame]
-如何使用python+selenium向富文本编辑器输入内容 - [editor]
+Python selenium —— 深刻解析及操作frame、iframe - [huilansame] <p>
+如何使用python+selenium向富文本编辑器输入内容 - [editor] <p>
 
 
 [huilansame]: https://huilansame.github.io/huilansame.github.io/archivers/switch-to-frame
