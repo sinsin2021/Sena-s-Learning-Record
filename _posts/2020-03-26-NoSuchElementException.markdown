@@ -54,6 +54,7 @@ driver.switch_to.default_content() -->離開frame框架
 趕緊寫上，免得哪天又忘了這些經典案例XD </p>
 
 <p>首先，先找出iframe的XPATH，先鎖定他並取名iframe </p>
+
 <p>之後!! 再使用switch_to.frame加上變數iframe </p>
 
 ```
@@ -73,23 +74,24 @@ driver.switch_to.frame(iframe)
 <p>結果 .. 恩 .. 不行 ...  </p>
 <p>看了教學之後才知道，原來要定位在iframe裡面的body上..</p>
 
-```
-driver.find_element_by_name("content").send_keys("測試")<p>
-上面這個我是失敗的，不曉得是寫錯還是哪邊沒看好<p>
 
-driver.find_element_by_xpath("/html/body").send_keys("測試中，造成您的困擾敬請見諒") <p>
-試了/html/body當作定位，才順利地將值寫入遇到textarea的定位問題 <p>
+```
+<p>driver.find_element_by_name("content").send_keys("測試")</p>
+<p>上面這個我是失敗的，不曉得是寫錯還是哪邊沒看好</p>
+
+<p>driver.find_element_by_xpath("/html/body").send_keys("測試中，造成您的困擾敬請見諒") </p>
+<p>試了/html/body當作定位，才順利地將值寫入遇到textarea的定位問題 </p>
 ```
 
 
 
 
 <p></p>
-◆◆◇◇ 參考資料 ◇◇◆◆
+<p>◆◆◇◇ 參考資料 ◇◇◆◆</p>
 
 
-Python selenium —— 深刻解析及操作frame、iframe - [huilansame] <p>
-如何使用python+selenium向富文本编辑器输入内容 - [editor] <p>
+<p>Python selenium —— 深刻解析及操作frame、iframe - [huilansame] </p>
+<p>如何使用python+selenium向富文本编辑器输入内容 - [editor] </p>
 
 
 [huilansame]: https://huilansame.github.io/huilansame.github.io/archivers/switch-to-frame
