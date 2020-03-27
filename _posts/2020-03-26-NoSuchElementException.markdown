@@ -51,7 +51,7 @@ driver.switch_to.default_content() -->離開frame框架
 <p>▽ 透過 iframe、frame 的XPATH解決定位失敗</p>
 
 <p>遇到新難題，iframe框架居然沒有name或id可以定位，於是搜尋了方法確定能夠成功實現後</p>
-趕緊寫上，免得哪天又忘了這些經典案例XD </p>
+<p>趕緊寫上，免得哪天又忘了這些經典案例XD </p>
 
 <p>首先，先找出iframe的XPATH，先鎖定他並取名iframe </p>
 
@@ -76,11 +76,11 @@ driver.switch_to.frame(iframe)
 
 
 ```
-<p>driver.find_element_by_name("content").send_keys("測試")</p>
-<p>上面這個我是失敗的，不曉得是寫錯還是哪邊沒看好</p>
+driver.find_element_by_name("content").send_keys("測試")
+上面這個我是失敗的，不曉得是寫錯還是哪邊沒看好
 
-<p>driver.find_element_by_xpath("/html/body").send_keys("測試中，造成您的困擾敬請見諒") </p>
-<p>試了/html/body當作定位，才順利地將值寫入遇到textarea的定位問題 </p>
+driver.find_element_by_xpath("/html/body").send_keys("測試中，造成您的困擾敬請見諒")
+試了/html/body當作定位，才順利地將值寫入遇到textarea的定位問題
 ```
 
 
