@@ -2,7 +2,7 @@
 layout: post
 title:  "python_定位失敗經驗"
 date:   2020-03-26 15:32:00 +0530
-categories: Javascript NodeJS
+categories: Python Selenium
 ---
 
 <font color="#FF0000">定位失敗_縮放視窗</font>
