@@ -23,6 +23,7 @@ plainwhite:
     #twitter: thelehhman
     #github:  thelehhman
     #linkedIn: in/thelehhman
+    disqus_shortname: games
     rss: rss
     # dribbble: jekyll
     # facebook: jekyll
@@ -50,6 +51,7 @@ plainwhite:
 # - about.md
 
 # Build settings
+show_excerpts: true
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
