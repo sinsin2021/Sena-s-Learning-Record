@@ -90,8 +90,8 @@ driver.find_element_by_xpath("/html/body").send_keys("測試中，造成您的�
 <p>◆◆◇◇ 參考資料 ◇◇◆◆</p>
 
 
-<p>Python selenium —— 深刻解析及操作frame、iframe - [huilansame] </p>
-<p>如何使用python+selenium向富文本编辑器输入内容 - [editor] </p>
+Python selenium —— 深刻解析及操作frame、iframe - [huilansame]
+如何使用python+selenium向富文本编辑器输入内容 - [editor]
 
 
 [huilansame]: https://huilansame.github.io/huilansame.github.io/archivers/switch-to-frame
