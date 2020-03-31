@@ -115,25 +115,30 @@ driver.switch_to_alert().send_keys("測試文字")
 <p>為了有時候出現視窗時，Selenium動作太快，因此使用等待，增加一點秒數，就能解決偵測失敗的問題</p>
 <p></p>
 
-<p>selenium+python自动化95-弹出框死活定位不到 - [8715207]</p>
-<p>Python selenium —— 教你分辨alert、window、div模态框，以及操作 - [alert]</p>
+selenium+python自动化95-弹出框死活定位不到 - [8715207]
 <p></p>
-
-
-
-
-
-
-
+Python selenium —— 教你分辨alert、window、div模态框，以及操作 - [alert]
 <p></p>
 <p></p>
+<p></p>
+<p></p>
+
+
+
+
+
+
 <p>◆◆◇◇ 參考資料 ◇◇◆◆</p>
 <p></p>
 <p></p>
-<p>Python selenium —— 深刻解析及操作frame、iframe - [huilansame]</p>
-<p>如何使用python+selenium向富文本编辑器输入内容 - [editor]</p>
-<p>selenium+python自动化95-弹出框死活定位不到 - [8715207]</p>
-<p>Python selenium —— 教你分辨alert、window、div模态框，以及操作 - [alert]</p>
+Python selenium —— 深刻解析及操作frame、iframe - [huilansame]
+<p></p>
+如何使用python+selenium向富文本编辑器输入内容 - [editor]
+<p></p>
+selenium+python自动化95-弹出框死活定位不到 - [8715207]
+<p></p>
+Python selenium —— 教你分辨alert、window、div模态框，以及操作 - [alert]
+<p></p>
 
 [huilansame]: https://huilansame.github.io/huilansame.github.io/archivers/switch-to-frame
 [editor]:https://blog.csdn.net/ever_mwumli/article/details/77945844?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
