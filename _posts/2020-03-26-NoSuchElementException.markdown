@@ -83,17 +83,59 @@ driver.find_element_by_xpath("/html/body").send_keys("測試中，造成您的�
 試了/html/body當作定位，才順利地將值寫入遇到textarea的定位問題
 ```
 
+<p>▽ alert定位</p>
+
+```
+def aleart_msg(): #印出Aleart內容
+	aleart = driver.switch_to_alert()
+	aleart = "aleart提示訊息： " + aleart.text
+	print(aleart)
+	driver.switch_to_alert().accept() #列印完後，按下確認鍵關閉
+
+```
+<p> selenium提供了「switch_to_alert()」方法，用以定位alert(警告訊息窗)、confirm(確認訊息窗)、prompt(提示訊息對話)</p>
+<p>然後再使用text(取得Aleart的顯示文字)、accept(確定鍵)、dismiss(取消)、send_keys(用在提示對話的輸入)</p>
+```
+1.接受訊息窗 (訊息窗點擊確認)
+driver.switch_to_alert().accept()
+
+2. 得到訊息窗的文字
+
+aleart=driver.switch_to_alert().text 
+print(aleart)
+
+3. 取消訊息窗 (訊息窗點擊取消)
+driver.switch_to_alert().dismiss()
+
+4. 提示訊息對話窗 (輸入值)
+
+driver.switch_to_alert().send_keys("測試文字")
+
+```
+<p>為了有時候出現視窗時，Selenium動作太快，因此使用等待，增加一點秒數，就能解決偵測失敗的問題</p>
+<p></p>
+
+<p>selenium+python自动化95-弹出框死活定位不到 - [8715207]</p>
+<p>Python selenium —— 教你分辨alert、window、div模态框，以及操作 - [alert]</p>
+<p></p>
+
+
+
+
 
 
 
 <p></p>
+<p></p>
 <p>◆◆◇◇ 參考資料 ◇◇◆◆</p>
-
-
-Python selenium —— 深刻解析及操作frame、iframe - [huilansame]
-如何使用python+selenium向富文本编辑器输入内容 - [editor]
-
+<p></p>
+<p></p>
+<p>Python selenium —— 深刻解析及操作frame、iframe - [huilansame]</p>
+<p>如何使用python+selenium向富文本编辑器输入内容 - [editor]</p>
+<p>selenium+python自动化95-弹出框死活定位不到 - [8715207]</p>
+<p>Python selenium —— 教你分辨alert、window、div模态框，以及操作 - [alert]</p>
 
 [huilansame]: https://huilansame.github.io/huilansame.github.io/archivers/switch-to-frame
 [editor]:https://blog.csdn.net/ever_mwumli/article/details/77945844?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
-
+[8715207]:https://www.cnblogs.com/yoyoketang/p/8715207.html
+[alert]:https://huilansame.github.io/huilansame.github.io/archivers/switch-to-alert-window-div
