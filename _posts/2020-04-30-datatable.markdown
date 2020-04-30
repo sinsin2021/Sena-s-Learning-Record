@@ -1,91 +1,87 @@
 ---
 layout: post
-title:  "python_表格動作處理"
-date:   2020-04-09 16:30:00 +0530
-categories: Python Selenium
+title:  "TortoiseGit + GitHub 小烏龜的簡易設定指南"
+date:   2020-04-30 14:24:00 +0530
+categories: TortoiseGit GitHub
 ---
 
-<font color="#FF0000">頁面中的「表格」處理</font>
-
-<p>▼ 表格的點擊</p>
-
-<p>這次做的測試，則是網頁的頁籤點擊</p>
-<p>主題是使用table去做，所以我們要點擊的位置是table的tr </p>
-<p>但是，我不想讓頁籤是不夠彈性的，所以我要根據「頁籤上的文字」去做點擊</p>
-<p> 第一頁、第二頁、第三頁、第四頁</p>
-<p>而我要點擊第二頁，單視情況可能會有順序調整的問題，因此我不能寫死。</p>
-<p></p>
-
-```
-tr_cssTr=driver.find_element(By.XPATH,'/html/body/table/tbody/tr[1]/td/table/tbody/tr')
-td_content = tr_cssTr.find_elements(By.TAG_NAME,'td')
-#以上這兩行的意思是，先定位到「頁籤(td)」的上一層位置(tr)，再透過定位好的tr
-#去撈出所有的「頁籤(td)」標籤。
-
-a_1=0
-for td in (td_content):
-	a_1+=1
-	if(td.text=='第一頁'):
-	driver.find_element(By.XPATH,'/html/body/table/tbody/tr[1]/td/table/tbody/tr/td[%d]'%(a_1)).click()
-
- # a_1 是我要記錄順序的變數，當我進入迴圈後，我變數加1，等於是紀錄現在「頁籤(td)」的位置
- # 當我搜索到的頁籤文字(.text是得到表格的數據內容) 等於'第一頁'時，則根據a_1所得到的位置所在
- # 串入定位方法中並且做點擊的動作。
+<font color="#FF0000">TortoiseGit & GitHub 小烏龜的簡易設定指南</font>
 
 
+<p> 在設定的過程中，總覺得很麻煩，參考很多網站，不過都是蒐集到片段的操作</p>
+<p> 剛好看到這篇教學文，也跟著做之後，才終於測試成功QQ 怕哪天這好文被刪除了，因此想做個筆記</p>
+<p> 感謝小太陽的IT學習筆記(有附操作流程圖)  !! 網站連結放於本文下方</p>
 
-page_td_content = []
-page_Num=0
-for td in (td_content):
-  page_td_content.append(td.text)
-  try:
-    page_Num=page_td_content.index("%s"%(topic_typy))
-    driver.find_element(By.XPATH, '/html/body/table/tbody/tr[1]/td/table/tbody/tr/td[%d]' % (page_Num+1)).click()
-  except:
-    pass
-    
-# 第二次後來改寫的版本
-#先設page_td_content為空白陣列
-#將每次td的文字TEXT加入page_td_content的陣列之中
-#topic_typy為輸入的標籤文字
-#在page_td_content陣列中找出topic_typy相符的文字
-#例如陣列中 ["安妮","喬治","捷克","梅林"]
-#梅林為該陣列中的第三個 ※陣列由0開始
-#但網頁上的標籤由1開始算，因此當我撈出陣列中的第三個符合文字條件
-#再將該陣列的位置加上1，即取得頁面標籤中的該文字位置
 
 
 ```
+取得金鑰、並設定GIT的SSH
 
+1. 開啟開始選單 -> 所有程式 -> TortoiseGit -> Puttygen
+2. 開啟「Puttygen」後，點擊Generate後，會出現綠色進度條，與此同時請記得在下方的空白處，四處隨意移動滑鼠
+  依此他會隨機產生金鑰內容
+3. 點擊「Save private key」， 該檔案儲存至桌面或者資料夾，只要你找得到都行
+4. 複製剛剛所產生出的金鑰，直至== ，不要全選!! 選到「==」 就好，後面的全都不需要複製
+5. 之後開啟程式，在 開始 >> TortoiseGit >> Pageant ，選擇add Key 並選擇剛剛存的金鑰檔案
+6. 回到github中登入， 之後點擊頭像後，菜單中點擊「settings」
+7. 點擊「SSH keys」，再點擊「Add SSH key」，標題隨意，key輸入第四點的金鑰，最後點擊「Add Key」
+8. 確認是否已經加入SSH清單中。
 
-<p></p>
-<p></p>
-
-<p>▽ 印出表格文字</p>
-
-<p>模擬表格</p>
-https://www.w3school.com.cn/tiy/t.asp?f=html_table_test
-<p></p>
+```
 <p></p>
 
 ```
-tb=driver.find_element(By.XPATH,'/html/body/table/tbody')
-th_content = tb.find_elements(By.TAG_NAME,'th')
+git本地倉儲設定
 
-# 先定位整個表格存入變數tb
-# 再透過tb定位，找出所有<th>標籤
 
-for th in th_content:
-  print(th.text)
-	
-在捕捉到的欄位中，加上「.text」即可取得該欄位的文字內容。
-但簡單來說，先定位到內容欄位，找到他的上一層，之後再做定位，一層一層的定位下來。
-之後使用迴圈，將資料一筆一筆撈出來，並且印出該欄位內容。
+1. 首先，先將滑鼠移至準備要放到GitHub裡頭的資料夾，並且右鍵對該資料夾點擊右鍵
+
+2. 右鍵後，出現的選單點擊「Git Creat Repository here…」，因為我已經設定為中文化
+   因此，我的選單是中文「Git在此建立版本庫(Y)…」
+   
+3. 出現訊息框，點擊OK，第二次出現的訊息框依舊點擊OK
+
+4. 之後查看你的資料夾是否出現一個透明圖示的GIT資料夾，如果沒看到請在資料夾檢視中
+   將隱藏的項目勾選，使之顯示於資料夾
+   
+5. 之後在資料夾，再次點擊右鍵讓它出現工具列表，「TortoiseGit -> Settings」中文化為「TortoiseGit->設定(s)」
+
+6. 出現設定視窗後，右側選單點擊「Git」，填入name、Email
+
+7. 先到 github中，建立一個新倉儲，並將該倉儲的SSH給複製下來
+
+8. 回到設定視窗，點擊「Remote」，中文化為「遠端」，URL的部分，填入倉儲的SSH ，點擊add New/sava (新增/保存)
+
+9. 提示視窗，先點yes
+
 
 ```
 
+<p></p>
+
+```
+上傳至git
+
+1. 先將資料夾中的檔案，右鍵後，選擇「Git Commit -> master」做提交的動作
+2. 上方為必填的描述區塊，下方則是文件勾選，要Commit哪些文件，之後點擊「ok」
+3. Commit成功會顯示藍色文字，紅色則是有問題
+4. commit是指已經將該紀錄保存至「本機」的git隱藏資料夾內!!
+5. 之後，點擊「Push」，將會把你的git隱藏資料夾內容，一併上傳至GitHub
+6. 勾選 Push all brandes ， Remote 則選擇剛剛已經設定的Remote名稱，點擊ok，完成上傳!!
+7. 到 GitHub網頁，確認是否上傳成功
+
+```
+
+
+<p></p>
 <p></p>
 
 
 <p>◆◆◇◇ 參考資料 ◇◇◆◆</p>
+
+```
+1. https://chaoyang0717.wordpress.com/tag/tortoisegit/  - 小太陽的IT學習筆記
+2. 
+```
+
 <p></p>
