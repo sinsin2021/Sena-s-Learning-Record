@@ -32,6 +32,29 @@ for td in (td_content):
  # 當我搜索到的頁籤文字(.text是得到表格的數據內容) 等於'第一頁'時，則根據a_1所得到的位置所在
  # 串入定位方法中並且做點擊的動作。
 
+
+
+page_td_content = []
+page_Num=0
+for td in (td_content):
+  page_td_content.append(td.text)
+  try:
+    page_Num=page_td_content.index("%s"%(topic_typy))
+    driver.find_element(By.XPATH, '/html/body/table/tbody/tr[1]/td/table/tbody/tr/td[%d]' % (page_Num+1)).click()
+  except:
+    pass
+    
+# 第二次後來改寫的版本
+#先設page_td_content為空白陣列
+#將每次td的文字TEXT加入page_td_content的陣列之中
+#topic_typy為輸入的標籤文字
+#在page_td_content陣列中找出topic_typy相符的文字
+#例如陣列中 ["安妮","喬治","捷克","梅林"]
+#梅林為該陣列中的第三個 ※陣列由0開始
+#但網頁上的標籤由1開始算，因此當我撈出陣列中的第三個符合文字條件
+#再將該陣列的位置加上1，即取得頁面標籤中的該文字位置
+
+
 ```
 
 
@@ -49,13 +72,13 @@ https://www.w3school.com.cn/tiy/t.asp?f=html_table_test
 tb=driver.find_element(By.XPATH,'/html/body/table/tbody')
 th_content = tb.find_elements(By.TAG_NAME,'th')
 
-先定位到該欄位的標籤的上一層[tbody]，之後利用tb去做定位，取得th
-for th in (th):
-	print(tr.text)
+# 先定位整個表格存入變數tb
+# 再透過tb定位，找出所有<th>標籤
+
+for th in th_content:
+  print(th.text)
 	
 在捕捉到的欄位中，加上「.text」即可取得該欄位的文字內容。
-但這個示範表格，我沒有真的去測試過一次，所以我也不敢確定，定位的部分是否會使數據正確。
-因為我測試的東西是不大能公開的，所以只能找個範例做筆記。
 但簡單來說，先定位到內容欄位，找到他的上一層，之後再做定位，一層一層的定位下來。
 之後使用迴圈，將資料一筆一筆撈出來，並且印出該欄位內容。
 
