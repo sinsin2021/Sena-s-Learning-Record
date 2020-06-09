@@ -63,26 +63,27 @@ visible_text  ->   ["透過index","透過選單的值","透過選項內容"]
     searchPanel=Select(driver.find_element(By.NAME,'searchPanel'))
 
 1. 印出當前選項的選項內容
-    Select(searchPanel).select_by_index(0)
+    <p>Select(searchPanel).select_by_index(0)</p>
     <font color="#4400CC"># 先「控制」下拉選單元件選擇index(0)的選項</font>
-    search_Data=searchPanel.first_selected_option.text
+    <p>search_Data=searchPanel.first_selected_option.text</p>
     <font color="#4400CC"># 「抓取」下拉選單元件目前選擇的選項的選項內容</font>
-    print(search_Data)
+    <p>print(search_Data)</p>
     <font color="#4400CC"># 印出選項內容</font>
 
 
 2. 點擊下拉選單的每個選項
-    for i in range(len(searchPanel.options)):
+    <p>for i in range(len(searchPanel.options)):</p>
     <font color="#4400CC"># len() 計算長度，在裡面放入searchPanel.options</font>
     <font color="#4400CC"># 根據下拉選單元件計算有多少個選項</font>
-    Select(searchPanel_Xpath).select_by_index(i)
+    <p>Select(searchPanel_Xpath).select_by_index(i)</p>
     <font color="#4400CC"># index跟著迴圈做變動，實現點擊每個選項</font>
         
 3. 取得下拉式選單的所有選項內容
-    for j in searchPanel.options:
+    
+    <p>for j in searchPanel.options:</p>
     <font color="#4400CC"># 迴圈會依序從序列取得元素，並將元素指定給前面自訂的變數(此例為 j)</font>
     <font color="#4400CC"># 再執行迴圈裡的內容，直到序列每一元素都被取出過為止。</font>
-    print(j.text)
+    <p>print(j.text)</p>
     <font color="#4400CC"># 依序印出選項內的文字</font>    
 
 
@@ -96,9 +97,9 @@ visible_text  ->   ["透過index","透過選單的值","透過選項內容"]
 
 <p>◆◆◇◇ 參考資料 ◇◇◆◆</p>
 
-```
+
 1.透過 Selenium 操作下拉式選單 (Select) - [jzchangmark]
 
-```
-[jzchangmark]: https://jzchangmark.wordpress.com/2015/03/05/%E9%80%8F%E9%81%8E-selenium-%E6%93%8D%E4%BD%9C%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE-select/
+[jzchangmark]:https://jzchangmark.wordpress.com/2015/03/05/%E9%80%8F%E9%81%8E-selenium-%E6%93%8D%E4%BD%9C%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE-select/
+
 <p></p>
