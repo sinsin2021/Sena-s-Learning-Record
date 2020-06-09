@@ -16,7 +16,8 @@ categories: python
 
 	第一步- 至anaconda的官網，點擊Download下載與你電腦版本相符的python
 			個人的Python版本是使用 3.7 version，版本比較新~以下提供連結↓
-			{% highlight ruby %}https://www.anaconda.com/distribution/{% endhighlight %}
+			[anaconda]
+			
 	
 	第二步- 下載完畢後，執行安裝~
 			1. 第一步，Install for 的部分，勾選第一個 Just me
@@ -54,3 +55,4 @@ Thank you for read !!<br>
 如果對本文有任何指教，都歡迎來信告知!!<br>
 感謝各位~ 有空再補上圖片使本文更詳細QQ<br>
 
+[anaconda]: https://www.anaconda.com/products/individual
