@@ -28,17 +28,17 @@ from selenium.webdriver.support.select import Select
 
 「控制」下拉選單元件時，記得要使用Select()方法喔!!
 
-第一種定位方法
+<p>第一種定位方法</p>
 searchPanel_Xpath = driver.find_element(By.NAME,'searchPanel')
 Select(searchPanel_Xpath)
-第二種定位方法
+<p>第二種定位方法</p>
 Select(driver.find_element(By.XPATH,'帶入元件的XPATH'))
 
-兩種定位方式是一樣的，且回傳回來的都是 陣列型態 喔!!
+<p>兩種定位方式是一樣的，且回傳回來的都是"陣列型態"喔!!</p>
 
-index         ->   [0,1,2]
-value         ->   ["1","2","3"]
-visible_text  ->   ["透過index","透過選單的值","透過選項內容"]
+<p>index         ->   [0,1,2]</p>
+<p>value         ->   ["1","2","3"]</p>
+<p>isible_text   ->   ["透過index","透過選單的值","透過選項內容"]</p>
 
     1. 控制下拉選單時，透過 [ index ] 做選取
     Select(searchPanel_Xpath).select_by_index(0)
