@@ -39,14 +39,13 @@ Select(driver.find_element(By.XPATH,'帶入元件的XPATH'))
 index         ->   [0,1,2]
 value         ->   ["1","2","3"]
 visible_text  ->   ["透過index","透過選單的值","透過選項內容"]
-    
-1. 控制下拉選單時，透過 [ index ] 做選取
-Select(searchPanel_Xpath).select_by_index(0)
-2. 控制下拉選單時，透過 [ value ] 做選取
-Select(searchPanel_Xpath).select_by_value("2")  
-3. 控制下拉選單時，透過 [ 選項內容 ] 做選取
-Select(searchPanel_Xpath).select_by_visible_text("透過選項內容")
 
+    1. 控制下拉選單時，透過 [ index ] 做選取
+    Select(searchPanel_Xpath).select_by_index(0)
+    2. 控制下拉選單時，透過 [ value ] 做選取
+    Select(searchPanel_Xpath).select_by_value("2")  
+    3. 控制下拉選單時，透過 [ 選項內容 ] 做選取
+    Select(searchPanel_Xpath).select_by_visible_text("透過選項內容")
 
 <p></p>
 <p></p>
@@ -61,32 +60,28 @@ Select(searchPanel_Xpath).select_by_visible_text("透過選項內容")
     <option value = "3" title="visible_text" >透過選項內容</option>
 </select>
 
-searchPanel=Select(driver.find_element(By.NAME,'searchPanel'))
+    searchPanel=Select(driver.find_element(By.NAME,'searchPanel'))
 
 1. 印出當前選項的選項內容
-
-Select(searchPanel).select_by_index(0)
-<font color="#4400CC"># 先「控制」下拉選單元件選擇index(0)的選項</font>
-search_Data=searchPanel.first_selected_option.text
-<font color="#4400CC"># 「抓取」下拉選單元件目前選擇的選項的選項內容</font>
-print(search_Data)
-<font color="#4400CC"># 印出選項內容</font>
+    Select(searchPanel).select_by_index(0)
+    <font color="#4400CC"># 先「控制」下拉選單元件選擇index(0)的選項</font>
+    search_Data=searchPanel.first_selected_option.text
+    <font color="#4400CC"># 「抓取」下拉選單元件目前選擇的選項的選項內容</font>
+    print(search_Data)
+    <font color="#4400CC"># 印出選項內容</font>
 
 
 2. 點擊下拉選單的每個選項
-
-for i in range(len(searchPanel.options)):
-<font color="#4400CC"># len() 計算長度，在裡面放入searchPanel.options</font>
-<font color="#4400CC"># 根據下拉選單元件計算有多少個選項</font>
-        
-Select(searchPanel_Xpath).select_by_index(i)
-<font color="#4400CC"># index跟著迴圈做變動，實現點擊每個選項</font>
+    for i in range(len(searchPanel.options)):
+    <font color="#4400CC"># len() 計算長度，在裡面放入searchPanel.options</font>
+    <font color="#4400CC"># 根據下拉選單元件計算有多少個選項</font>
+    Select(searchPanel_Xpath).select_by_index(i)
+    <font color="#4400CC"># index跟著迴圈做變動，實現點擊每個選項</font>
         
 3. 取得下拉式選單的所有選項內容
-for j in searchPanel.options:
-<font color="#4400CC"># 迴圈會依序從序列取得元素，並將元素指定給前面自訂的變數(此例為 j)</font>
-<font color="#4400CC"># 再執行迴圈裡的內容，直到序列每一元素都被取出過為止。</font>
-
+    for j in searchPanel.options:
+    <font color="#4400CC"># 迴圈會依序從序列取得元素，並將元素指定給前面自訂的變數(此例為 j)</font>
+    <font color="#4400CC"># 再執行迴圈裡的內容，直到序列每一元素都被取出過為止。</font>
     print(j.text)
     <font color="#4400CC"># 依序印出選項內的文字</font>    
 
