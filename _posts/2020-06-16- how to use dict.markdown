@@ -72,9 +72,9 @@ zip(names, values) 會將 names 與 values 的每個元素以一對一的方式�
 <p></p>
 3.python关于列表转为字典的两个小方法 - [WangMark]
 <p></p>
-4. Python資料儲存容器tuple-串列-字典-集合 - [tuple]
+4.Python資料儲存容器tuple-串列-字典-集合 - [tuple]
 <p></p>
-5. Python字典簡介以及用法詳解 - [codertw]
+5.Python字典簡介以及用法詳解 - [codertw]
 
 [gtwang]:https://blog.gtwang.org/programming/python-iterate-through-multiple-lists-in-parallel/
 [Dictionary]:https://www.runoob.com/python/python-dictionary.html
