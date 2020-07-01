@@ -10,10 +10,13 @@ categories: Selenium Python positioning fullcalendar
 
 
 <h2><font color="#FF0000" style="font-weight:bold;">1.HTML屬性處理</font></h2>
-這次要測試的是 fullcalendar行事曆，透過比照本地日期，去找到相對應的日期位置，並且將行事曆內容填入。
+
+
+這次要測試的是fullcalendar行事曆，透過比照本地日期，去找到相對應的日期位置，並且將行事曆內容填入。
+
 fullcalendar行事曆的日期時間，放置在名為「data-date」的屬性中。
-我們使用get_attribute()，取出日期內容，並根據日期找出目前在頁面中的XPATH位置
-找出正確的位置後，並對其元件位置做處理(例:點擊)
+
+我們使用get_attribute()，取出日期內容，並根據日期找出目前在頁面中的XPATH位置找出正確的位置後，並對其元件位置做處理(例:點擊)
 
 
 ```
@@ -25,9 +28,11 @@ data- 全域屬性構成一組稱作「自訂data屬性」的屬性。
 
 
 首先我的方法是抓出「data-date」的屬性後，要和今天的日期做比對
+
 且須檢查data-date內的日期和time.localtime()日期的"格式"是否一致。
 
 如若要抓出屬性內的資料，則需要使用到以下這個get_attribute()方式。
+
 
 ```
 如何取出該屬性的內容
@@ -60,10 +65,13 @@ else:
 ```
 
 所以當我在取得data-date屬性中的時候，加上了replace()
+
 1.把「-」的符號從字串中拿掉，並填入''空字串
 td_test=calendar_week.get_attribute('data-date').replace('-','')
+
 2.印出來看看是否成功
 print(td_test)
+
 3.顯示結果為：
 20200701
 
@@ -100,26 +108,38 @@ print(td_test)
 ```
 
 第一行：定位整個表格
+
 第二行：在表格內，定位行事曆的「列」的部分，其行事曆上共有6列，每一列的名稱為「fc-row fc-week fc-widget-content fc-rigid」，因此第二行的用意在於撈出所有名稱為「fc-row fc-week fc-widget-content fc-rigid」的列。
+
 
 ```
 在第二行定位class_name的過程中，噴出此錯誤訊息「Compound class names not permitted」GOOGLE後，得出是因為我的CLASS_NAME中包含了空格，所以直接複製過來定位的話就會噴錯。
 所以有空格的話就不能用CALSS_NAME做定位，必須改成CSS_SELECTOR定位
 find_element_by_css_selector("[class='CLASS的名字']")
 ```
+
 第三行：使用迴圈，範圍則是列的數量，詢問每一列
+
 第四行：重新定位表格
+
 第五行：重新定位列，此次的話定位每一個列
+
 第六行：藉由定位列得到每一小格(日)
+
 第七行：使用迴圈訪問每一格
+
 第八行：使用get_attribute()和replace()將每一格的日期抓出來並做處理
+
 第九行：抓出今天的日期並放入變數「local_Date」中
+
 第十行：執行判斷
 
 <p></p>
 <p></p>
 <p></p>
 <p></p>
+
+
 
 
 
