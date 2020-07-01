@@ -8,9 +8,8 @@ categories: Selenium Python positioning fullcalendar
 
 
 
-<body>
 
-<h2><font color="#FF0000" style="font-weight:bold;">1. Selenium 定位特殊事件處理</font></h2>
+<h2><font color="#FF0000" style="font-weight:bold;">1.HTML屬性處理</font></h2>
 這次要測試的是 fullcalendar行事曆，透過比照本地日期，去找到相對應的日期位置，並且將行事曆內容填入。
 fullcalendar行事曆的日期時間，放置在名為「data-date」的屬性中。
 我們使用get_attribute()，取出日期內容，並根據日期找出目前在頁面中的XPATH位置
@@ -80,13 +79,42 @@ print(td_test)
 
 
 
-<h2><font color="#FF0000" style="font-weight:bold;">2. Selenium 定位特殊事件處理</font></h2>
+<h2><font color="#FF0000" style="font-weight:bold;">2. 找出今日的位置，並做判斷</font></h2>
 
-定位class_name的過程中，噴出此錯誤訊息「Compound class names not permitted」
-GOOGLE後，得出是因為我的CLASS_NAME中包含了空格，所以直接複製過來定位的話就會噴錯
+1. 先定位至整個表格後再抓取他的列數，看總共有幾列
+
+```
+1. fc_Day_Grid=driver.find_element(By.CLASS_NAME,"fc-day-grid")
+2. fc_row=fc_Day_Grid.find_elements(By.CSS_SELECTOR,"[class='fc-row fc-week fc-widget-content fc-rigid']")
+3. for i_29 in range(len(fc_row)):
+4.	dt=driver.find_element(By.CLASS_NAME,"fc-day-grid")
+5.		dr_Row=dt.find_element(By.XPATH,"//*[@class='fc-day-grid']/div[{0}]/div/table/tbody/tr[1]".format(i_29+1))
+6.	td_Row=dr_Row.find_elements(By.TAG_NAME,'td')
+7.	for i_30 in range(len(td_Row)):
+8.		day_List=td_Row[i_30].get_attribute('data-date').replace('-','')
+9.		local_Date=time.strftime("%Y%m%d", time.localtime())
+10.		if(day_List==local_Date):
+11.			print("找到囉")
+12.		else:
+13.			print("錯誤")
+```
+
+第一行：定位整個表格
+第二行：在表格內，定位行事曆的「列」的部分，其行事曆上共有6列，每一列的名稱為「fc-row fc-week fc-widget-content fc-rigid」，因此第二行的用意在於撈出所有名稱為「fc-row fc-week fc-widget-content fc-rigid」的列。
+
+```
+在第二行定位class_name的過程中，噴出此錯誤訊息「Compound class names not permitted」GOOGLE後，得出是因為我的CLASS_NAME中包含了空格，所以直接複製過來定位的話就會噴錯。
 所以有空格的話就不能用CALSS_NAME做定位，必須改成CSS_SELECTOR定位
 find_element_by_css_selector("[class='CLASS的名字']")
-
+```
+第三行：使用迴圈，範圍則是列的數量，詢問每一列
+第四行：重新定位表格
+第五行：重新定位列，此次的話定位每一個列
+第六行：藉由定位列得到每一小格(日)
+第七行：使用迴圈訪問每一格
+第八行：使用get_attribute()和replace()將每一格的日期抓出來並做處理
+第九行：抓出今天的日期並放入變數「local_Date」中
+第十行：執行判斷
 
 <p></p>
 <p></p>
@@ -105,4 +133,4 @@ find_element_by_css_selector("[class='CLASS的名字']")
 [attribute()]:https://blog.csdn.net/xm_csdn/article/details/53390649
 
 <p></p>
-<body>
+
