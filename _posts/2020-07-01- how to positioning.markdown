@@ -9,7 +9,7 @@ categories: Selenium Python positioning fullcalendar
 
 
 
-<h2><font color="#FF0000" style="font-weight:bold;">1.HTML屬性處理</font></h2>
+<h2><font color="#FF0000" style="font-weight:bold;">1.印出fullcalendar的屬性「data-*」內的日期</font></h2>
 
 
 這次要測試的是fullcalendar行事曆，透過比照本地日期，去找到相對應的日期位置，並且將行事曆內容填入。
@@ -147,6 +147,7 @@ find_element_by_css_selector("[class='CLASS的名字']")
 
 <p></p>
 1.HTML5 中的 data-* attribute 屬性 - [attribute]
+
 2.python selenium 获取标签的属性值 - [attribute()]
 
 [HTML5]:https://pjchender.blogspot.com/2017/01/html-5-data-attribute.html
