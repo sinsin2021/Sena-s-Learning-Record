@@ -158,6 +158,11 @@ find_element_by_css_selector("[class='CLASS的名字']")
 <p></p>
 
 
+
+<hr size="3px" align="center" width="100%">
+
+
+
 <h2><font color="#FF0000" style="font-weight:bold;">3. 以當日為基準，往後署七日，啟用「提醒功能當天-7天前」，全都做過一次</font></h2>
 
 這次卡得比較久的是，如果當日不是禮拜天的話，格子走到一半就會遇到格子為7，也就是最末格，此時要往下一列的第0行移動。
@@ -259,7 +264,7 @@ arr_Add_0 在二十列的時候，就已經從0加上1，這裡的arr_Add_0已�
 
 
 
-
+<hr size="3px" align="center" width="100%">
 
 <p>◆◆◇◇ 參考資料 ◇◇◆◆</p>
 
