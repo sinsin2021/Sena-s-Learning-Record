@@ -88,8 +88,8 @@ print(td_test)
 
 
 
-<img src="picture/how to positioning_fullcalendar_1.png" width="100" height="100" alt="AltText"/>
-<img src="picture/how to positioning_fullcalendar_2.png" width="100" height="100" alt="AltText"/>
+<img src="picture/fullcalendar_1.png" width="100" height="100" alt="AltText"/>
+<img src="picture/fullcalendar_2.png" width="100" height="100" alt="AltText"/>
 
 
 <hr size="3px" align="center" width="100%">
