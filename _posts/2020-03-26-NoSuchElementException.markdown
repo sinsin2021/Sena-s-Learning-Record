@@ -19,10 +19,17 @@ categories: Python Selenium
 
 <p>我試著用這三個元素進行定位，但都失敗… ((至今還是個半解之謎 </p>
 
-最後請我朋友幫忙，我們也試著一遍但都無效，最後他無聊縮放了網頁，這個謎就破了一半...<br>
+最後請我朋友幫忙，我們也試著一遍但都無效，最後他試著縮放了網頁，這個謎就破了一半...<br>
 ( ´•ω•` )   
 
+
+
+<p>0710 - 某天換了一台電腦顯示器後，他就失真，要重調視窗大小才能偵測得到。</p>
+<p>後來得出，似乎是RWD的問題，導致網址可能有些變化…導致如果我們移動了視窗大小，即便是元件名字都一樣，但就捕捉不到。</p>
+
 <p></p>
+
+<hr size="3px" align="center" width="100%">
 
 <font color="#FF0000">定位失敗_iframe、frame框架</font>
 
@@ -44,6 +51,7 @@ driver = webdriver.Chrome()
 driver.switch_to.frame(frame的ID或NAME)  -->  進入frame框架
 driver.switch_to.default_content() -->離開frame框架
 ```
+<hr size="3px" align="center" width="100%">
 
 <p></p>
 <font color="#FF0000">定位失敗_iframe、frame沒有name或id</font>
@@ -63,6 +71,8 @@ driver.switch_to.frame(iframe)
 ```
 
 <p></p>
+<hr size="3px" align="center" width="100%">
+
 <font color="#FF0000">定位失敗_iframe的editor</font>
 
 
@@ -126,7 +136,7 @@ Python selenium —— 教你分辨alert、window、div模态框，以及操作 
 
 
 
-
+<hr size="3px" align="center" width="100%">
 
 <p>◆◆◇◇ 參考資料 ◇◇◆◆</p>
 <p></p>

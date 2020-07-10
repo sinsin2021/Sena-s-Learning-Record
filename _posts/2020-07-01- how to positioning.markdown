@@ -2,7 +2,7 @@
 layout: post
 title:  "Python Selenium fullcalendar定位"
 date:   2020-07-01 11:07:00 +0530
-categories: Selenium Python positioning fullcalendar
+categories: Selenium Python positioning fullcalendar numpy
 ---
 <title><font color="#FF0000" style="font-weight:bold;">1. Selenium 定位fullcalendar 行事曆</font></title>
 
@@ -87,6 +87,14 @@ print(td_test)
 
 
 
+
+<img src="picture/how to positioning_fullcalendar_1.png" width="100" height="100" alt="AltText"/>
+<img src="picture/how to positioning_fullcalendar_2.png" width="100" height="100" alt="AltText"/>
+
+
+<hr size="3px" align="center" width="100%">
+
+
 <h2><font color="#FF0000" style="font-weight:bold;">2. 遍尋整張行事曆，再根據今天日期撈出位置</font></h2>
 
 1. 先定位至整個表格後再抓取他的列數，看總共有幾列，在經由列去抓出該列的格子有幾格
@@ -163,7 +171,7 @@ find_element_by_css_selector("[class='CLASS的名字']")
 
 
 
-<h2><font color="#FF0000" style="font-weight:bold;">3. 以當日為基準，往後署七日，啟用「提醒功能當天-7天前」，全都做過一次</font></h2>
+<h2><font color="#FF0000" style="font-weight:bold;">3. 以當日為基準，往後數七日，啟用「提醒功能當天-7天前」，全都做過一次</font></h2>
 
 這次卡得比較久的是，如果當日不是禮拜天的話，格子走到一半就會遇到格子為7，也就是最末格，此時要往下一列的第0行移動。
 
