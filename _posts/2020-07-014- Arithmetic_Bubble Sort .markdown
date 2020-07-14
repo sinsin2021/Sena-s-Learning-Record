@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "python 氣泡排序法(Bubble Sort)"
-date:   2020-07-014 16:54:00 +0530
+date:   2020-07-14 16:54:00 +0530
 categories: Python Bubble Sort Arithmetic
 ---
 <title><font color="#FF0000" style="font-weight:bold;"> 演算法 </font></title>
